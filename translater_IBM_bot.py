@@ -285,20 +285,7 @@ def weather_bot(message):
             msg = bot.send_message(chat_id, 'Такого города нет... Уточните пожалуйста название!')
             bot.register_next_step_handler(msg, weather_bot)
 
-
-"""
-def switching_function(message):
-    chat_id = message.chat.id
-    next_buttom = message.text
-    user = user_dict[chat_id]
-    user.place = next_buttom
-    if next_buttom == u'Переводчик':
-        msg = bot.send_message(chat_id, 'Да, давайте переводить. Укажите на каком языке будете писать!')
-        bot.register_next_step_handler(msg, translater_func1)
-    elif next_buttom == u'Погода':
-        msg = bot.send_message(chat_id, 'Mы и так проверяем погоду! Введите город.')
-        bot.register_next_step_handler(msg, weather_bot)
-"""
+            
 bot.polling()
 while True:
     pass
